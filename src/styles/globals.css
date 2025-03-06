@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 13, 17, 23;
+  --background-end-rgb: 8, 12, 18;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  @apply bg-gray-800 rounded-lg shadow-lg p-6;
+}
+
+.button {
+  @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded transition-colors;
+}
+
+.transaction-item {
+  @apply border border-gray-700 p-4 rounded-md my-2 hover:bg-gray-800 transition-colors cursor-pointer;
+}
